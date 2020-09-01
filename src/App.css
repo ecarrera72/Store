@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-link {
+  color: #61dafb;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.botonMenu {
+  background-color: transparent;
+  display: inline-block;
+  border: 5px solid rgba(255, 255, 255, 0);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'A PERFECT PLACE';
+  font-size: 400%;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  transition: all 0.2s;
+  width: 25%;
+  text-shadow: #fff 0px 0px 5px;
+}
+
+@media screen and (max-width: 30em) {
+  .botonMenu {
+    width: 60%;
+    font-size: 300%;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  .App-header {
+    max-width: 200%;
+  }
+}
+
+.botonMenu:hover {
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: #000 5px 5px 5px;
+}
+
+.botonMenu:active {
+  border-color: #fff;
+  box-shadow: none;
+}
+
+.logo {
+  width: 40%;
+}
+
+@media screen and (max-width: 30em) {
+  .logo {
+    width: 75%;
+  }
+}
+
+@font-face {
+  font-family: "A PERFECT PLACE";
+  src: url("../src/font/A\ Perfect\ Place\ -\ TTF.ttf");
+}
+
+.nota {
+  font-family: 'ubuntu';
+  font-size: 150%;
+  text-align: right;
+  margin: 15px 50px 0px 0px;
+}
+
+.nota b {
+  color: #f8423c;
+}
