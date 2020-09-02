@@ -1,6 +1,5 @@
 import React from 'react';
 import './login.css'
-//import logo from './images/logo_SF.png';
 
 function login() {
     return (
