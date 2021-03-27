@@ -1,0 +1,11 @@
+.vertical-nav {
+    width: 17rem;
+    height: 100%;
+    position: fixed;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.6s;
+}
+  
+#sidebar.active {
+    margin-left: -17rem;
+}
