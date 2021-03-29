@@ -5,7 +5,7 @@ class Lognin extends React.Component {
     render() {
         return (
             <div className="container" id="divLogin">
-                <div className="row pt-5">
+                <div className="row pt-2">
                     <div className="col-md-5 mx-auto">
                         <div className="card text-center bg-dark rounded">  
                             <div className="card-body">
@@ -39,7 +39,8 @@ class Lognin extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div> )
+            </div>
+        )
     }
 }
 
