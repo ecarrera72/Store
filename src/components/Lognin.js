@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style/Lognin.css';
 
 class Lognin extends React.Component {
     render() {
         return (
             <div className="container" id="divLogin">
-                <div className="row pt-2">
+                <div className="row py-2">
                     <div className="col-md-5 mx-auto">
                         <div className="card text-center bg-dark rounded">  
                             <div className="card-body">
@@ -13,7 +14,7 @@ class Lognin extends React.Component {
                                     <h1><i className="fa fa-lock fa-3x"></i></h1>
                                     <input type="text" name="user" placeholder="Username" required />
                                     <input type="password" name="password" placeholder="Password" required/>
-                                    <a className="text-muted" href="/">Forgot password?</a>
+                                    <Link className="text-muted" to="/">Forgot password?</Link>
                                     <input type="submit" name="" value="Login"/>
                                     <div className="col-md-12">
                                         <ul className="social-network social-circle">

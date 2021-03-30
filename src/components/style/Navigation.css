@@ -1,4 +1,4 @@
-.vertical-nav {
+/* .vertical-nav {
     width: 17rem;
     height: 100%;
     position: fixed;
@@ -8,4 +8,10 @@
   
 #sidebar.active {
     margin-left: -17rem;
+} */
+
+.styleImg {
+    background: url('http://www.sieparking.com.mx/wp-content/uploads/2017/12/sistemas-de-cobro-para-estacionamientos-mexico_8.jpg?id=2898') no-repeat;
+    background-size: 100% 100%;
+
 }

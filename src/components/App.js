@@ -1,6 +1,7 @@
 import React from 'react';
 import './style/App.css';
 import Navigation from './Navigation';
+import Footer from './Footer';
 import Lognin from './Lognin'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -14,14 +15,10 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Navigation />
-        <div className="page-content p-3 active" id="content">
-          <button className="btn btn-light bg-white rounded-pill shadow-sm" onClick={this.toggleChange}>
-            <i className="fa fa-bars"></i>
-          </button>
-          <Switch>
-            <Route exact path="/" component={ Lognin } />
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/lognin" component={ Lognin } />
+        </Switch>
+        {/* <Footer /> */}
       </BrowserRouter>
     )
   }
