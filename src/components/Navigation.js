@@ -37,14 +37,9 @@ class Navigation extends React.Component {
                     </div>
                 </nav>
 
-                <div className="jumbotron jumbotron-image color-grey-light text-light bg-transparent">
-                    <div className="mask rgba-black-strong d-flex align-items-center h-100">
-                        <div className="container text-center text-white py-5">
-                            <h1 className="mb-3">Aztek Control y Automatizacion</h1>
-                            {/* <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt justo non massa
-                            porta molestie.</p> */}
-                        </div>
-                    </div>
+                
+                <div className="container text-center text-white py-5">
+                    <h1>Aztek Control y Automatizacion</h1>
                 </div>
                 {/* <nav className="navbar navbar-expand-md navbar-light bg-light">
                     <Link className="navbar-brand" to="/">

@@ -1,21 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './style/Lognin.css';
+import axios from 'axios';
 
 class Lognin extends React.Component {
+    
+    validateLogin() {
+        axios.get('') 
+    }
+
     render() {
         return (
             <div className="container" id="divLogin">
-                <div className="row py-2">
+                <div className="row">
                     <div className="col-md-5 mx-auto">
                         <div className="card text-center bg-dark rounded">  
                             <div className="card-body">
                                 <form className="box">
                                     <h1><i className="fa fa-lock fa-3x"></i></h1>
-                                    <input type="text" name="user" placeholder="Username" required />
-                                    <input type="password" name="password" placeholder="Password" required/>
-                                    <Link className="text-muted" to="/">Forgot password?</Link>
-                                    <input type="submit" name="" value="Login"/>
+                                    <input type="text" name="user" placeholder="Usuario" required />
+                                    <input type="password" name="password" placeholder="Contraseña" required/>
+                                    <Link className="text-muted" to="/">Olvido su Contraseña?</Link>
+                                    <input type="submit" name="" value="Acceso"/>
                                     <div className="col-md-12">
                                         <ul className="social-network social-circle">
                                             <li>
