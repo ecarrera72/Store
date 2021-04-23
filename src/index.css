@@ -1,35 +1,14 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  background-image: url(../src/images/fondoTienda.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /*font-size: calc(10px + 2vmin);*/
-  color: white;
+    /* background: #599fd9;
+    background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+    background: linear-gradient(to right, #599fd9, #c2e59c);
+    min-height: 100%;
+    overflow-x: hidden; */
+    background: url('https://demos.creative-tim.com/paper-kit-pro-react/static/media/pk-pro-cover.7998942a.jpg') no-repeat;
+    /* background: url('https://demos.creative-tim.com/paper-kit-pro-react/static/media/bruno-abatti.62de0ac8.jpg') no-repeat; */
+    background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.divImg {
-  text-align: center;
-  width: 70%;
-}
-
-@media screen and (max-width: 30em) {
-  .divImg {
-    width: 120%;
-  }
+.text-gray {
+    color: #aaa;
 }
