@@ -1,41 +1,76 @@
-// import FormData from 'form-data'
-// import axios from 'axios';
+const axios = require('axios');
+const { apiSettings } = require('../database/sqlite');
 
+let settings = null;
 
-// async function getToken() {
-//     let form = new FormData();
-//     form.append('username', 'tuga');
-//     form.append('password', 'secretToken');
-
-//     return await axios.get( 'http://localhost:8000/authToken/', { body: { username: "tuga" } });
-// }
-
-
-// export default getToken;
-import axios from 'axios';
-import FormData from 'form-data';
-let data = new FormData();
-data.append('username', 'tuga');
-data.append('password', 'secretToken');
-
-async function getAuthToken() {
-
-    let config = {
-        method: 'get',
-        url: 'http://localhost:8000/authToken/',
-        headers: { 
-            ...data.getHeaders()
-        },
-        data : data
-    };
-
-    axios(config)
-    .then(function (response) {
-        console.log(JSON.stringify(response.data));
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
+async function getSetting() {
+    if (settings == null){ settings = await apiSettings(); }
+    return settings;
 }
 
-export default getAuthToken;
+async function apiRest(metod, entity, data = null, params = null, token = null) {
+    await getSetting();
+
+    let config = {
+        method: metod,
+        url: `${settings.host}:${settings.port}/${entity}`
+    };
+
+    if ( data ) {
+        config.data = data;
+    }
+
+    if ( params ) {
+        config.params = params;
+    }
+    
+    if ( token ) {
+        config.headers = { 
+            'Content-Type': 'application/json',
+            'Authorization': `${token.tokenType} ${token.accessToken}`
+        }
+    }
+
+    return await axios( config );
+
+};
+
+async function getAuth() {
+    try {
+        return await apiRest( 'post', 'authToken', { cusu_user: 'tuga', cusu_pass: 'secretToken' } );
+    } catch (error) {
+        console.error(error);
+    }    
+};
+
+// async function getData(entity) {
+//     const resSettings = await getSetting();
+//     return await axios.get(`${resSettings.host}:${resSettings.port}/${resSettings.path}/${entity}`);
+// }
+
+// async function getDataParams(entity, params) {
+//     const resSettings = await getSetting();
+//     return await axios.get(`${resSettings.host}:${resSettings.port}/${resSettings.path}/${entity}/${params}`);
+// }
+
+// async function getDataObject(entity, object) {
+//     const resSettings = await getSetting();
+//     return await axios.get(`${resSettings.host}:${resSettings.port}/${resSettings.path}/${entity}`, { data: object });
+// }
+
+// async function postData(entity, objetc) {
+//     await getSetting();
+//     return await axios.post(`${settings.host}:${settings.port}/${entity}`, objetc);
+// }
+
+module.exports = {
+    apiRest,
+    getAuth
+}
+
+// module.exports = {
+//     getData,
+//     getDataParams,
+//     getDataObject,
+//     postData
+// }

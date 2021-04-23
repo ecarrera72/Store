@@ -1,0 +1,107 @@
+* {
+    max-width: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('https://demos.creative-tim.com/paper-kit-pro-react/static/media/pk-pro-cover.7998942a.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.masthead {
+    color: #fff;
+    min-height: 30rem;
+    width: 100%;
+    height: 100%;
+}
+
+.masthead h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 992px) {
+    .masthead h1 {
+        font-size: 5.5rem;
+    }
+}
+
+.perfil {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+.thareas {
+    border: 1px solid #fff;
+}
+
+.area-header {
+    background-color:#18456b;
+    color:white;
+}
+
+.table-wrapper-scroll {
+    overflow-y: auto;
+    max-height: 35rem;
+}
+
+.table-wrapper-scroll thead th {
+    position: sticky;
+    top: 0;
+}
+
+.imgDocs {
+    filter: blur(2px);
+}
+
+.page-item {
+    text-align: center;
+    width: 4.5rem;
+}
+
+div.input-group.page-jump-to {
+    width: 10rem;
+}
+
+li.page-item.page-last-separator.disabled{
+    display: none;
+}
+
+li.page-item.page-first-separator.disabled{
+    display: none;
+}
+
+.product_view .modal-dialog{
+    max-width: 800px;
+    width: 100%;
+}
+
+.pre-cost{
+    text-decoration: line-through;
+    color: #a5a5a5;
+}
+
+.space-ten{
+    padding: 10px 0;
+}
+
+.titulo-tienda{
+    text-align: center; 
+    font-family: Arial Black; 
+    font-weight: bold; 
+    font-size: 60px;
+    font-variant: small-caps;
+    color: #fff; 
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+}
+}
