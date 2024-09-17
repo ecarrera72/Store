@@ -1,0 +1,65 @@
+<div class="container mt-4 pt-4" id="divLogin">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center bg-dark rounded">  
+                <div class="card-body">
+                    <form class="box" action="/signin" method="POST">
+                        <h1><i class="fa fa-lock fa-3x"></i></h1>
+                        <input type="text" name="user" placeholder="Usuario" required />
+                        <input type="password" name="password" placeholder="Contraseña" required/>
+                        <a class="text-muted" href="/forgot">Olvido su Contraseña?</a>
+                        <input type="submit" value="Acceso"/>
+                        <div class="col-md-12">
+                            <ul class="social-network social-circle">
+                                <li>
+                                    <a href="https://www.facebook.com/pages/category/Electronics/Aztek-Control-Y-Automatizacion-107108518083849/" class="icoFacebook" title="Facebook">
+                                        <i class="fa fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.sieparking.com.mx/" class="icoGoogle" title="Google">
+                                        <i class="fa fa-google"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://api.whatsapp.com/send?phone=+525567652596&text=Mi%20Problema%20es:" class="icoWhatsapp" title="Whatsapp">
+                                        <i class="fa fa-whatsapp"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{!-- <div class="container mt-4 pt-4 animate__animated animate__backInDown animate__delay-1.5s">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center shadow bg-body rounded">
+                <div class="card-body">
+                    <img src="/img/logo_aztek.png" alt="Logo" class="card-img-top mx-auto w-75 shadow-lg p-3 mb-5 bg-body rounded">
+                    <form action="/signin" method="POST">
+                        <div class="form-group p-1">
+                            <input type="text" name="username" placeholder="Usuario" class="form-control" autofocus>
+                        </div>
+                        <div class="form-group p-1">
+                            <input type="password" name="password" placeholder="Contraseña" class="form-control" data-toggle="password">
+                        </div>
+                        <div class="form-group d-grid gap-2 mx-auto p-1">
+                            <button class="btn btn-primary">
+                                Entrar
+                            </button>
+                        </div>
+                        <div class="form-group p-1">
+                            <a href="/forgot">Olvido su Contaseña?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}
